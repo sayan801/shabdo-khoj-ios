@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "AddingFilesOption.h"
+#import "SWTableViewCell.h"
+#import "NSMutableArray+SWUtilityButtons.h"
 
 @class AddingFilesOption;
 
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SWTableViewCellDelegate>
+
+
 
 @property (strong, nonatomic) UIWindow *window;
 @property(strong, nonatomic) UINavigationController *navigationController;

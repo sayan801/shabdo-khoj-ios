@@ -7,13 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageFile.h"
 
-
+@class ImageFile;
 @interface AddingFilesOption : UIViewController
 
 
 @property (strong, nonatomic) UIWindow *window;
 @property(strong, nonatomic) UINavigationController *navigationController;
-//@property (strong, nonatomic) ViewController *ViewController;
+@property (strong, nonatomic) ImageFile *ImageFile;
+
+- (IBAction)AddPhotos:(id)sender;
+
+- (IBAction)AddVideo:(id)sender;
+
+- (IBAction)AddDocuments:(id)sender;
+
 
 @end
