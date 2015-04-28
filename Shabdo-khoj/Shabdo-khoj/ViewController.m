@@ -24,4 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)AddFiles:(id)sender {
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *myFile = [mainBundle pathForResource: @"data" ofType: @"bin"];
+    
+    NSLog(@"Main bundle path: %@", mainBundle);
+    NSLog(@"myFile path: %@", myFile);
+}
 @end
