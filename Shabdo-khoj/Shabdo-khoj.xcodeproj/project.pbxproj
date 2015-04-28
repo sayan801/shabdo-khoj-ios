@@ -20,6 +20,22 @@
 		8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */; };
 		8AD6E7851AEFA8C50040DAC6 /* ImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */; };
 		8AD6E7861AEFA8C50040DAC6 /* ImageFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */; };
+		8AD6E7881AEFAE830040DAC6 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7871AEFAE830040DAC6 /* AssetsLibrary.framework */; };
+		8AD6E78A1AEFAE9C0040DAC6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7891AEFAE9C0040DAC6 /* AVFoundation.framework */; };
+		8AD6E78C1AEFAEAB0040DAC6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E78B1AEFAEAB0040DAC6 /* MediaPlayer.framework */; };
+		8AD6E78F1AEFB02C0040DAC6 /* AssetBrowserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E78E1AEFB02C0040DAC6 /* AssetBrowserItem.m */; };
+		8AD6E7A31AEFC64D0040DAC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7A21AEFC64D0040DAC6 /* Foundation.framework */; };
+		8AD6E7A51AEFC6690040DAC6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7A41AEFC6690040DAC6 /* QuartzCore.framework */; };
+		8AD6E7A71AEFC6750040DAC6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7A61AEFC6750040DAC6 /* CoreGraphics.framework */; };
+		8AD6E7AB1AEFCA010040DAC6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7AA1AEFCA010040DAC6 /* CoreData.framework */; };
+		8AD6E7AD1AEFCA380040DAC6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7AC1AEFCA380040DAC6 /* MobileCoreServices.framework */; };
+		8AD6E7AF1AEFCA450040DAC6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7AE1AEFCA450040DAC6 /* CoreMotion.framework */; };
+		8AD6E7B61AEFCCDC0040DAC6 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7B11AEFCCDC0040DAC6 /* SWCellScrollView.m */; };
+		8AD6E7B71AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7B31AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.m */; };
+		8AD6E7B81AEFCCDC0040DAC6 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7B51AEFCCDC0040DAC6 /* SWUtilityButtonView.m */; };
+		8AD6E7BD1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7BA1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m */; };
+		8AD6E7BE1AEFCD1E0040DAC6 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7BC1AEFCD1E0040DAC6 /* SWTableViewCell.m */; };
+		8AD6E7C11AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7C01AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +70,29 @@
 		8AD6E7821AEFA8C50040DAC6 /* ImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFile.h; sourceTree = "<group>"; };
 		8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFile.m; sourceTree = "<group>"; };
 		8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageFile.xib; sourceTree = "<group>"; };
+		8AD6E7871AEFAE830040DAC6 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8AD6E7891AEFAE9C0040DAC6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8AD6E78B1AEFAEAB0040DAC6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8AD6E78D1AEFB02C0040DAC6 /* AssetBrowserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetBrowserItem.h; path = ../AssetBrowserItem.h; sourceTree = "<group>"; };
+		8AD6E78E1AEFB02C0040DAC6 /* AssetBrowserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AssetBrowserItem.m; path = ../AssetBrowserItem.m; sourceTree = "<group>"; };
+		8AD6E7A21AEFC64D0040DAC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8AD6E7A41AEFC6690040DAC6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8AD6E7A61AEFC6750040DAC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8AD6E7AA1AEFCA010040DAC6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8AD6E7AC1AEFCA380040DAC6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8AD6E7AE1AEFCA450040DAC6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8AD6E7B01AEFCCDC0040DAC6 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		8AD6E7B11AEFCCDC0040DAC6 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		8AD6E7B21AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		8AD6E7B31AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		8AD6E7B41AEFCCDC0040DAC6 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		8AD6E7B51AEFCCDC0040DAC6 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		8AD6E7B91AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		8AD6E7BA1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		8AD6E7BB1AEFCD1E0040DAC6 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		8AD6E7BC1AEFCD1E0040DAC6 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		8AD6E7BF1AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		8AD6E7C01AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +100,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD6E7AF1AEFCA450040DAC6 /* CoreMotion.framework in Frameworks */,
+				8AD6E7AD1AEFCA380040DAC6 /* MobileCoreServices.framework in Frameworks */,
+				8AD6E7AB1AEFCA010040DAC6 /* CoreData.framework in Frameworks */,
+				8AD6E7A71AEFC6750040DAC6 /* CoreGraphics.framework in Frameworks */,
+				8AD6E7A51AEFC6690040DAC6 /* QuartzCore.framework in Frameworks */,
+				8AD6E7A31AEFC64D0040DAC6 /* Foundation.framework in Frameworks */,
+				8AD6E78C1AEFAEAB0040DAC6 /* MediaPlayer.framework in Frameworks */,
+				8AD6E78A1AEFAE9C0040DAC6 /* AVFoundation.framework in Frameworks */,
+				8AD6E7881AEFAE830040DAC6 /* AssetsLibrary.framework in Frameworks */,
 				8AD6E77A1AEF79960040DAC6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +126,10 @@
 		8AD5546E1AEF78EB00B26630 = {
 			isa = PBXGroup;
 			children = (
+				8AD6E7AE1AEFCA450040DAC6 /* CoreMotion.framework */,
+				8AD6E7AC1AEFCA380040DAC6 /* MobileCoreServices.framework */,
 				8AD554791AEF78EB00B26630 /* Shabdo-khoj */,
+				8AD6E7A81AEFC6D30040DAC6 /* Framework */,
 				8AD554961AEF78EB00B26630 /* Shabdo-khojTests */,
 				8AD554781AEF78EB00B26630 /* Products */,
 			);
@@ -108,9 +159,11 @@
 				8AD6E7821AEFA8C50040DAC6 /* ImageFile.h */,
 				8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */,
 				8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */,
+				8AD6E78D1AEFB02C0040DAC6 /* AssetBrowserItem.h */,
+				8AD6E78E1AEFB02C0040DAC6 /* AssetBrowserItem.m */,
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
+				8AD6E7A91AEFC78C0040DAC6 /* SWTableViewCell */,
 				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
-				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
 				8AD5547A1AEF78EB00B26630 /* Supporting Files */,
 			);
 			path = "Shabdo-khoj";
@@ -140,6 +193,41 @@
 				8AD554981AEF78EB00B26630 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AD6E7A81AEFC6D30040DAC6 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6E7AA1AEFCA010040DAC6 /* CoreData.framework */,
+				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
+				8AD6E7A61AEFC6750040DAC6 /* CoreGraphics.framework */,
+				8AD6E78B1AEFAEAB0040DAC6 /* MediaPlayer.framework */,
+				8AD6E7A41AEFC6690040DAC6 /* QuartzCore.framework */,
+				8AD6E7A21AEFC64D0040DAC6 /* Foundation.framework */,
+				8AD6E7871AEFAE830040DAC6 /* AssetsLibrary.framework */,
+				8AD6E7891AEFAE9C0040DAC6 /* AVFoundation.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		8AD6E7A91AEFC78C0040DAC6 /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6E7BF1AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.h */,
+				8AD6E7C01AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m */,
+				8AD6E7B91AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.h */,
+				8AD6E7BA1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m */,
+				8AD6E7BB1AEFCD1E0040DAC6 /* SWTableViewCell.h */,
+				8AD6E7BC1AEFCD1E0040DAC6 /* SWTableViewCell.m */,
+				8AD6E7B01AEFCCDC0040DAC6 /* SWCellScrollView.h */,
+				8AD6E7B11AEFCCDC0040DAC6 /* SWCellScrollView.m */,
+				8AD6E7B21AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.h */,
+				8AD6E7B31AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.m */,
+				8AD6E7B41AEFCCDC0040DAC6 /* SWUtilityButtonView.h */,
+				8AD6E7B51AEFCCDC0040DAC6 /* SWUtilityButtonView.m */,
+			);
+			name = SWTableViewCell;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,11 +333,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD6E7801AEFA4760040DAC6 /* AddingFilesOption.m in Sources */,
+				8AD6E7BE1AEFCD1E0040DAC6 /* SWTableViewCell.m in Sources */,
 				8AD6E7851AEFA8C50040DAC6 /* ImageFile.m in Sources */,
+				8AD6E7B71AEFCCDC0040DAC6 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				8AD554801AEF78EB00B26630 /* AppDelegate.m in Sources */,
+				8AD6E7B61AEFCCDC0040DAC6 /* SWCellScrollView.m in Sources */,
+				8AD6E7C11AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				8AD6E78F1AEFB02C0040DAC6 /* AssetBrowserItem.m in Sources */,
 				8AD5547D1AEF78EB00B26630 /* main.m in Sources */,
 				8AD554861AEF78EB00B26630 /* ViewController.m in Sources */,
 				8AD554831AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld in Sources */,
+				8AD6E7B81AEFCCDC0040DAC6 /* SWUtilityButtonView.m in Sources */,
+				8AD6E7BD1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
