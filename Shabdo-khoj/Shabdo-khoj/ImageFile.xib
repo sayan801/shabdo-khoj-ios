@@ -59,12 +59,29 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneicon@1x" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-Xk-byN">
-                    <rect key="frame" x="26" y="70" width="308" height="239"/>
+                    <rect key="frame" x="49" y="83" width="285" height="226"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shabdo khoj" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-YN-kqB">
+                    <rect key="frame" x="-14" y="-5" width="389" height="84"/>
+                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
+                    <color key="textColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-SV-7An">
+                    <rect key="frame" x="1" y="22" width="46" height="30"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="deL-fD-LTb"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="432.5" y="361.5"/>
+            <point key="canvasLocation" x="300.5" y="333.5"/>
         </view>
     </objects>
     <resources>

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageFile.h"
+#import "ViewController.h"
 
+@class ViewController;
 @class ImageFile;
 @interface AddingFilesOption : UIViewController
 
@@ -16,12 +18,13 @@
 @property (strong, nonatomic) UIWindow *window;
 @property(strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) ImageFile *ImageFile;
-
+@property (strong, nonatomic) ViewController *ViewController;
 - (IBAction)AddPhotos:(id)sender;
 
 - (IBAction)AddVideo:(id)sender;
 
 - (IBAction)AddDocuments:(id)sender;
 
+- (IBAction)back:(id)sender;
 
 @end

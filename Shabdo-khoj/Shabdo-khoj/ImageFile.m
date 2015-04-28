@@ -138,4 +138,10 @@
 
 
 
+- (IBAction)back:(id)sender {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.AddingFilesOption = [[AddingFilesOption alloc] initWithNibName:@"AddingFilesOption" bundle:nil];
+    self.window.rootViewController = self.AddingFilesOption;
+    [self.window makeKeyAndVisible];
+}
 @end

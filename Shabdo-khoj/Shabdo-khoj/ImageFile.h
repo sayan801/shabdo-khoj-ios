@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "AddingFilesOption.h"
 
+@class AddingFilesOption;
 @class ViewController;
 @interface ImageFile : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -20,7 +22,11 @@
 - (IBAction)GalleryOpen:(id)sender;
 - (IBAction)CameraOpen:(id)sender;
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
-@property (strong, nonatomic) ViewController *ViewController;
 
+@property (strong, nonatomic) UIWindow *window;
+@property(strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) ViewController *ViewController;
+@property (strong, nonatomic) AddingFilesOption *AddingFilesOption;
+- (IBAction)back:(id)sender;
 
 @end
