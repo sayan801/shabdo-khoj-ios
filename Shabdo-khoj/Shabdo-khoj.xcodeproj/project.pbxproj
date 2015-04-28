@@ -15,6 +15,7 @@
 		8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548A1AEF78EB00B26630 /* Images.xcassets */; };
 		8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */; };
 		8AD5549A1AEF78EB00B26630 /* Shabdo_khojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */; };
+		8AD6E77A1AEF79960040DAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7791AEF79960040DAC6 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8AD554931AEF78EB00B26630 /* Shabdo-khojTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shabdo-khojTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD554981AEF78EB00B26630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shabdo_khojTests.m; sourceTree = "<group>"; };
+		8AD6E7791AEF79960040DAC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD6E77A1AEF79960040DAC6 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +94,7 @@
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
 				8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */,
 				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
+				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
 				8AD5547A1AEF78EB00B26630 /* Supporting Files */,
 			);
 			path = "Shabdo-khoj";
@@ -416,6 +420,7 @@
 				8AD5549F1AEF78EB00B26630 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AD554A01AEF78EB00B26630 /* Build configuration list for PBXNativeTarget "Shabdo-khojTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				8AD554A21AEF78EB00B26630 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
