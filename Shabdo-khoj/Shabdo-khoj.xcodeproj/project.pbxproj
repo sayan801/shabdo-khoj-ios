@@ -16,6 +16,7 @@
 		8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */; };
 		8AD5549A1AEF78EB00B26630 /* Shabdo_khojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */; };
 		8AD6E77A1AEF79960040DAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7791AEF79960040DAC6 /* UIKit.framework */; };
+		8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		8AD554981AEF78EB00B26630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shabdo_khojTests.m; sourceTree = "<group>"; };
 		8AD6E7791AEF79960040DAC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				8AD5547F1AEF78EB00B26630 /* AppDelegate.m */,
 				8AD554841AEF78EB00B26630 /* ViewController.h */,
 				8AD554851AEF78EB00B26630 /* ViewController.m */,
+				8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */,
 				8AD554871AEF78EB00B26630 /* Main.storyboard */,
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
 				8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */,
@@ -208,6 +211,7 @@
 			files = (
 				8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */,
 				8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */,
+				8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */,
 				8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
