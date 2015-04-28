@@ -11,5 +11,16 @@
 @interface ViewController : UIViewController
 
 
+
+- (IBAction)AddFiles:(id)sender;
+
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
+
+
+
+
 @end
 
