@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AD5547D1AEF78EB00B26630 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5547C1AEF78EB00B26630 /* main.m */; };
+		8AD554801AEF78EB00B26630 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5547F1AEF78EB00B26630 /* AppDelegate.m */; };
+		8AD554831AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */; };
+		8AD554861AEF78EB00B26630 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554851AEF78EB00B26630 /* ViewController.m */; };
+		8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD554871AEF78EB00B26630 /* Main.storyboard */; };
+		8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548A1AEF78EB00B26630 /* Images.xcassets */; };
+		8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */; };
+		8AD5549A1AEF78EB00B26630 /* Shabdo_khojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AD554941AEF78EB00B26630 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD5546F1AEF78EB00B26630 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD554761AEF78EB00B26630;
+			remoteInfo = "Shabdo-khoj";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8AD554771AEF78EB00B26630 /* Shabdo-khoj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shabdo-khoj.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD5547B1AEF78EB00B26630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD5547C1AEF78EB00B26630 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8AD5547E1AEF78EB00B26630 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8AD5547F1AEF78EB00B26630 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8AD554821AEF78EB00B26630 /* Shabdo_khoj.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shabdo_khoj.xcdatamodel; sourceTree = "<group>"; };
+		8AD554841AEF78EB00B26630 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8AD554851AEF78EB00B26630 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8AD554881AEF78EB00B26630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AD5548A1AEF78EB00B26630 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8AD5548D1AEF78EB00B26630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8AD554931AEF78EB00B26630 /* Shabdo-khojTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shabdo-khojTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD554981AEF78EB00B26630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shabdo_khojTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AD554741AEF78EB00B26630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD554901AEF78EB00B26630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AD5546E1AEF78EB00B26630 = {
+			isa = PBXGroup;
+			children = (
+				8AD554791AEF78EB00B26630 /* Shabdo-khoj */,
+				8AD554961AEF78EB00B26630 /* Shabdo-khojTests */,
+				8AD554781AEF78EB00B26630 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD554781AEF78EB00B26630 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AD554771AEF78EB00B26630 /* Shabdo-khoj.app */,
+				8AD554931AEF78EB00B26630 /* Shabdo-khojTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AD554791AEF78EB00B26630 /* Shabdo-khoj */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5547E1AEF78EB00B26630 /* AppDelegate.h */,
+				8AD5547F1AEF78EB00B26630 /* AppDelegate.m */,
+				8AD554841AEF78EB00B26630 /* ViewController.h */,
+				8AD554851AEF78EB00B26630 /* ViewController.m */,
+				8AD554871AEF78EB00B26630 /* Main.storyboard */,
+				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
+				8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */,
+				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
+				8AD5547A1AEF78EB00B26630 /* Supporting Files */,
+			);
+			path = "Shabdo-khoj";
+			sourceTree = "<group>";
+		};
+		8AD5547A1AEF78EB00B26630 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5547B1AEF78EB00B26630 /* Info.plist */,
+				8AD5547C1AEF78EB00B26630 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8AD554961AEF78EB00B26630 /* Shabdo-khojTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */,
+				8AD554971AEF78EB00B26630 /* Supporting Files */,
+			);
+			path = "Shabdo-khojTests";
+			sourceTree = "<group>";
+		};
+		8AD554971AEF78EB00B26630 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AD554981AEF78EB00B26630 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AD554761AEF78EB00B26630 /* Shabdo-khoj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD5549D1AEF78EB00B26630 /* Build configuration list for PBXNativeTarget "Shabdo-khoj" */;
+			buildPhases = (
+				8AD554731AEF78EB00B26630 /* Sources */,
+				8AD554741AEF78EB00B26630 /* Frameworks */,
+				8AD554751AEF78EB00B26630 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Shabdo-khoj";
+			productName = "Shabdo-khoj";
+			productReference = 8AD554771AEF78EB00B26630 /* Shabdo-khoj.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AD554921AEF78EB00B26630 /* Shabdo-khojTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD554A01AEF78EB00B26630 /* Build configuration list for PBXNativeTarget "Shabdo-khojTests" */;
+			buildPhases = (
+				8AD5548F1AEF78EB00B26630 /* Sources */,
+				8AD554901AEF78EB00B26630 /* Frameworks */,
+				8AD554911AEF78EB00B26630 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AD554951AEF78EB00B26630 /* PBXTargetDependency */,
+			);
+			name = "Shabdo-khojTests";
+			productName = "Shabdo-khojTests";
+			productReference = 8AD554931AEF78EB00B26630 /* Shabdo-khojTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AD5546F1AEF78EB00B26630 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = technicise.com;
+				TargetAttributes = {
+					8AD554761AEF78EB00B26630 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					8AD554921AEF78EB00B26630 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 8AD554761AEF78EB00B26630;
+					};
+				};
+			};
+			buildConfigurationList = 8AD554721AEF78EB00B26630 /* Build configuration list for PBXProject "Shabdo-khoj" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AD5546E1AEF78EB00B26630;
+			productRefGroup = 8AD554781AEF78EB00B26630 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AD554761AEF78EB00B26630 /* Shabdo-khoj */,
+				8AD554921AEF78EB00B26630 /* Shabdo-khojTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AD554751AEF78EB00B26630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */,
+				8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */,
+				8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD554911AEF78EB00B26630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AD554731AEF78EB00B26630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD554801AEF78EB00B26630 /* AppDelegate.m in Sources */,
+				8AD5547D1AEF78EB00B26630 /* main.m in Sources */,
+				8AD554861AEF78EB00B26630 /* ViewController.m in Sources */,
+				8AD554831AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD5548F1AEF78EB00B26630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD5549A1AEF78EB00B26630 /* Shabdo_khojTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AD554951AEF78EB00B26630 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD554761AEF78EB00B26630 /* Shabdo-khoj */;
+			targetProxy = 8AD554941AEF78EB00B26630 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AD554871AEF78EB00B26630 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD554881AEF78EB00B26630 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD5548D1AEF78EB00B26630 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AD5549B1AEF78EB00B26630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8AD5549C1AEF78EB00B26630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AD5549E1AEF78EB00B26630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Shabdo-khoj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AD5549F1AEF78EB00B26630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Shabdo-khoj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8AD554A11AEF78EB00B26630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Shabdo-khojTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shabdo-khoj.app/Shabdo-khoj";
+			};
+			name = Debug;
+		};
+		8AD554A21AEF78EB00B26630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Shabdo-khojTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shabdo-khoj.app/Shabdo-khoj";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AD554721AEF78EB00B26630 /* Build configuration list for PBXProject "Shabdo-khoj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD5549B1AEF78EB00B26630 /* Debug */,
+				8AD5549C1AEF78EB00B26630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD5549D1AEF78EB00B26630 /* Build configuration list for PBXNativeTarget "Shabdo-khoj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD5549E1AEF78EB00B26630 /* Debug */,
+				8AD5549F1AEF78EB00B26630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8AD554A01AEF78EB00B26630 /* Build configuration list for PBXNativeTarget "Shabdo-khojTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD554A11AEF78EB00B26630 /* Debug */,
+				8AD554A21AEF78EB00B26630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8AD554821AEF78EB00B26630 /* Shabdo_khoj.xcdatamodel */,
+			);
+			currentVersion = 8AD554821AEF78EB00B26630 /* Shabdo_khoj.xcdatamodel */;
+			path = Shabdo_khoj.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8AD5546F1AEF78EB00B26630 /* Project object */;
+}
