@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface ImageFile : UIViewController
+@class ViewController;
+@interface ImageFile : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+
+
+
+@property (strong, nonatomic) IBOutlet UIImageView *image_view;
+- (IBAction)imageSave:(id)sender;
+- (IBAction)GalleryOpen:(id)sender;
+- (IBAction)CameraOpen:(id)sender;
+@property (strong, nonatomic) UIImagePickerController *imagePicker;
+@property (strong, nonatomic) ViewController *ViewController;
+
 
 @end
