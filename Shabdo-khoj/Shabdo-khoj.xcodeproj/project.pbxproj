@@ -18,6 +18,8 @@
 		8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */; };
 		8AD6E7801AEFA4760040DAC6 /* AddingFilesOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */; };
 		8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */; };
+		8AD6E7851AEFA8C50040DAC6 /* ImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */; };
+		8AD6E7861AEFA8C50040DAC6 /* ImageFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		8AD6E77D1AEFA4760040DAC6 /* AddingFilesOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddingFilesOption.h; sourceTree = "<group>"; };
 		8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingFilesOption.m; sourceTree = "<group>"; };
 		8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddingFilesOption.xib; sourceTree = "<group>"; };
+		8AD6E7821AEFA8C50040DAC6 /* ImageFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFile.h; sourceTree = "<group>"; };
+		8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageFile.m; sourceTree = "<group>"; };
+		8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageFile.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,9 @@
 				8AD6E77D1AEFA4760040DAC6 /* AddingFilesOption.h */,
 				8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */,
 				8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */,
+				8AD6E7821AEFA8C50040DAC6 /* ImageFile.h */,
+				8AD6E7831AEFA8C50040DAC6 /* ImageFile.m */,
+				8AD6E7841AEFA8C50040DAC6 /* ImageFile.xib */,
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
 				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
 				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
@@ -214,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD6E7861AEFA8C50040DAC6 /* ImageFile.xib in Resources */,
 				8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */,
 				8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */,
 				8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */,
@@ -236,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD6E7801AEFA4760040DAC6 /* AddingFilesOption.m in Sources */,
+				8AD6E7851AEFA8C50040DAC6 /* ImageFile.m in Sources */,
 				8AD554801AEF78EB00B26630 /* AppDelegate.m in Sources */,
 				8AD5547D1AEF78EB00B26630 /* main.m in Sources */,
 				8AD554861AEF78EB00B26630 /* ViewController.m in Sources */,
