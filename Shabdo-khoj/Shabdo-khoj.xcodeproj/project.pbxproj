@@ -13,10 +13,11 @@
 		8AD554861AEF78EB00B26630 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554851AEF78EB00B26630 /* ViewController.m */; };
 		8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD554871AEF78EB00B26630 /* Main.storyboard */; };
 		8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548A1AEF78EB00B26630 /* Images.xcassets */; };
-		8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */; };
 		8AD5549A1AEF78EB00B26630 /* Shabdo_khojTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */; };
 		8AD6E77A1AEF79960040DAC6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6E7791AEF79960040DAC6 /* UIKit.framework */; };
 		8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */; };
+		8AD6E7801AEFA4760040DAC6 /* AddingFilesOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */; };
+		8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,12 +41,14 @@
 		8AD554851AEF78EB00B26630 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8AD554881AEF78EB00B26630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AD5548A1AEF78EB00B26630 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8AD5548D1AEF78EB00B26630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8AD554931AEF78EB00B26630 /* Shabdo-khojTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shabdo-khojTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD554981AEF78EB00B26630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD554991AEF78EB00B26630 /* Shabdo_khojTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Shabdo_khojTests.m; sourceTree = "<group>"; };
 		8AD6E7791AEF79960040DAC6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		8AD6E77D1AEFA4760040DAC6 /* AddingFilesOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddingFilesOption.h; sourceTree = "<group>"; };
+		8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddingFilesOption.m; sourceTree = "<group>"; };
+		8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddingFilesOption.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 				8AD554851AEF78EB00B26630 /* ViewController.m */,
 				8AD6E77B1AEF88EF0040DAC6 /* ViewController.xib */,
 				8AD554871AEF78EB00B26630 /* Main.storyboard */,
+				8AD6E77D1AEFA4760040DAC6 /* AddingFilesOption.h */,
+				8AD6E77E1AEFA4760040DAC6 /* AddingFilesOption.m */,
+				8AD6E77F1AEFA4760040DAC6 /* AddingFilesOption.xib */,
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
-				8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */,
 				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
 				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
 				8AD5547A1AEF78EB00B26630 /* Supporting Files */,
@@ -210,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD554891AEF78EB00B26630 /* Main.storyboard in Resources */,
-				8AD5548E1AEF78EB00B26630 /* LaunchScreen.xib in Resources */,
+				8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */,
 				8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */,
 				8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */,
 			);
@@ -230,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD6E7801AEFA4760040DAC6 /* AddingFilesOption.m in Sources */,
 				8AD554801AEF78EB00B26630 /* AppDelegate.m in Sources */,
 				8AD5547D1AEF78EB00B26630 /* main.m in Sources */,
 				8AD554861AEF78EB00B26630 /* ViewController.m in Sources */,
@@ -262,14 +268,6 @@
 				8AD554881AEF78EB00B26630 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8AD5548C1AEF78EB00B26630 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8AD5548D1AEF78EB00B26630 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
