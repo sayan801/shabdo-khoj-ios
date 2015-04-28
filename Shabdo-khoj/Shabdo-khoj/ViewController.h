@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddingFilesOption.h"
 
-@interface ViewController : UIViewController
+@class AddingFilesOption;
+
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+@property(strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) AddingFilesOption *AddingFilesOption;
+
 
 
 
