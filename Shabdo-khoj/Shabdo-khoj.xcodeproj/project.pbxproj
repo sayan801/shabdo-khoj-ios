@@ -36,6 +36,7 @@
 		8AD6E7BD1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7BA1AEFCD1E0040DAC6 /* SWLongPressGestureRecognizer.m */; };
 		8AD6E7BE1AEFCD1E0040DAC6 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7BC1AEFCD1E0040DAC6 /* SWTableViewCell.m */; };
 		8AD6E7C11AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6E7C01AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m */; };
+		8AD6EFA31AF0AF930040DAC6 /* ChartDataPointNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6EFA21AF0AF930040DAC6 /* ChartDataPointNormal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		8AD6E7BC1AEFCD1E0040DAC6 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
 		8AD6E7BF1AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		8AD6E7C01AEFCD950040DAC6 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		8AD6EFA21AF0AF930040DAC6 /* ChartDataPointNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChartDataPointNormal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				8AD6E78D1AEFB02C0040DAC6 /* AssetBrowserItem.h */,
 				8AD6E78E1AEFB02C0040DAC6 /* AssetBrowserItem.m */,
 				8AD5548A1AEF78EB00B26630 /* Images.xcassets */,
+				8AD6EFA21AF0AF930040DAC6 /* ChartDataPointNormal.png */,
 				8AD6E7A91AEFC78C0040DAC6 /* SWTableViewCell */,
 				8AD554811AEF78EB00B26630 /* Shabdo_khoj.xcdatamodeld */,
 				8AD5547A1AEF78EB00B26630 /* Supporting Files */,
@@ -315,6 +318,7 @@
 				8AD6E7811AEFA4760040DAC6 /* AddingFilesOption.xib in Resources */,
 				8AD6E77C1AEF88EF0040DAC6 /* ViewController.xib in Resources */,
 				8AD5548B1AEF78EB00B26630 /* Images.xcassets in Resources */,
+				8AD6EFA31AF0AF930040DAC6 /* ChartDataPointNormal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +462,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code/demologinapp",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code/demologinappTests",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code",
+				);
 				INFOPLIST_FILE = "Shabdo-khoj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -468,6 +478,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code/demologinapp",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code/demologinappTests",
+					"$(PROJECT_DIR)/Shabdo-khoj/iosapp/code",
+				);
 				INFOPLIST_FILE = "Shabdo-khoj/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

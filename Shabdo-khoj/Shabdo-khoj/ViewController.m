@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-     tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+     tableData = [NSArray arrayWithObjects:@"Nepal Earth Quake News", @"Speech Processing Technology Lecture", @"Scientific Research Areas", @"Mumbai Trip", @"Fast and Furious 7", @"Cooking Recipes of Bengal", @"White Chocolate Donut recipe", @"English Premier League Highlights", @"Liga BBGA Goals", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Motor technlogy Preview", @"Green Kerala Tourism", @"Thai Shrimp Cake Recipe", @"Angry Birds In Making - Behind the Scene", @"Ham and Cheese Panini", nil];
     
     id delegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = [delegate managedObjectContext];
@@ -100,7 +100,7 @@
         }
     else
     {
-     cell.imageView.image= [UIImage imageNamed:@"phoneicon@1x.png"];
+     cell.imageView.image= [UIImage imageNamed:@"ChartDataPointNormal.png"];
     }
    
     return cell;
