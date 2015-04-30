@@ -8,6 +8,7 @@
 
 #import "ImageFile.h"
 #import "AppDelegate.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 
 @interface ImageFile ()
@@ -19,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+  /*  UIImageView *image ;
+    [image setAccessibilityIdentifier:@"file name"] ;
+    
+    NSString *file_name = [image accessibilityIdentifier] ;
+    NSLog(@"image name=%@",file_name);
+    */
+    
     
    }
 
@@ -38,24 +47,20 @@
 */
 
 - (IBAction)imageSave:(id)sender {
-    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *context = [delegate managedObjectContext];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"ImageSets" inManagedObjectContext:context];
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    //self.image_view *image ;
+   /* [self.image_view setAccessibilityIdentifier:@"file name"] ;
     
-    [request setEntity:entity];
-    NSError *error;
+    NSString *file_name = [self.image_view accessibilityIdentifier] ;
+    NSLog(@"image name=%@",file_name);
+    */
+    id delegate7 = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = [delegate7 managedObjectContext];
+    NSManagedObject *dataRecord7 = [NSEntityDescription
+                                    insertNewObjectForEntityForName:@"ImageSets" inManagedObjectContext:context];
     
-   // NSPredicate *pred=[NSPredicate predicateWithFormat:@"(user_id=%@)",GlobalUserId];
-   // [request setPredicate:pred];
     
-    NSManagedObject *matches=nil;
-    NSArray *objects=[context executeFetchRequest:request error:&error];
-//    if([objects count]!=0)
-//    {
-       // matches= [objects objectAtIndex:0];
-    
+     NSError *error;
+   
         if (self.image_view.image)
         {
             // Resize and save a smaller version for the table
@@ -79,16 +84,16 @@
             UIGraphicsBeginImageContext(rect.size);
             [self.image_view.image drawInRect:rect];
             UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+             NSLog(@"smallImage=%@",smallImage);
             UIGraphicsEndImageContext();
             
             // Save the small image version
             NSData *smallImageData = UIImageJPEGRepresentation(smallImage, 1.0);
-            [matches setValue:smallImageData forKey:@"image"];
+             [dataRecord7 setValue:smallImageData forKey:@"image"];
+           // [matches setValue:smallImageData forKey:@"image"];
             NSLog(@"end");
         }
-        
-        //  Commit item to core data
-       // NSError *error;
+    
         if (![context save:&error])
         {
             NSLog(@"Failed to add new picture with error: %@", [error domain]);
@@ -97,11 +102,6 @@
         {
             NSLog(@"inserted");
         }
-        
-        // addProfilePicture
-        
-        
-   // }
 
 }
 
@@ -143,5 +143,71 @@
     self.AddingFilesOption = [[AddingFilesOption alloc] initWithNibName:@"AddingFilesOption" bundle:nil];
     self.window.rootViewController = self.AddingFilesOption;
     [self.window makeKeyAndVisible];
+}
+/*
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info;
+{
+    // get the ref url
+    NSURL *refURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+    
+    // define the block to call when we get the asset based on the url (below)
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *imageAsset)
+    {
+        ALAssetRepresentation *imageRep = [imageAsset defaultRepresentation];
+        NSLog(@"[imageRep filename] : %@", [imageRep filename]);
+    };
+    
+    // get the asset library and fetch the asset based on the ref url (pass in block above)
+    ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
+    [assetslibrary assetForURL:refURL resultBlock:resultblock failureBlock:nil];
+    
+}
+ */
+#pragma mark - UIImagePickerControllerDelegate methods
+
+/*
+ Open PECropViewController automattically when image selected.
+ */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.image_view.image = image;
+    NSLog(@"bbbbbbbbb=%@",info.description);
+    NSURL *url=[info
+                objectForKey:UIImagePickerControllerReferenceURL];
+      NSLog(@"yyyyyyy=%@",url.description);
+    
+    
+    NSURL *url1=[info
+                objectForKey:UIImagePickerControllerMediaURL];
+    NSLog(@"nnnn=%s",url1.fileSystemRepresentation);
+
+
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+      
+    } else {
+        [picker dismissViewControllerAnimated:YES completion:^{
+            //[self openEditor:nil];
+        }];
+    }
+}
+
+
+
+
+
+
+///
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    [imagePicker dismissModalViewControllerAnimated:YES];
+    [self.image_view setImage:image];
+}
+
+//  On cancel, only dismiss the picker controller
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    //[imagePicker dismissModalViewControllerAnimated:YES];
 }
 @end

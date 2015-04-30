@@ -12,6 +12,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "AssetBrowserItem.h"
+#import "AppDelegate.h"
 
 @interface AddingFilesOption ()
 
@@ -24,7 +25,11 @@
 
 @end
 
-@implementation AddingFilesOption
+@implementation AddingFilesOption{
+
+UIImageView *image_view;
+UIImagePickerController *imagePicker;
+}
 @synthesize assetsLibrary, assetItems,dic;
 @synthesize videoURL,videoURLArray, mpVideoPlayer;
 
@@ -58,14 +63,63 @@
 }
 
 - (IBAction)AddVideo:(id)sender {
+  
    // [self buildAssetsLibrary];
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
     [self presentModalViewController:imagePicker animated:YES];
+     NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+     NSString *filePath = [documentDir stringByAppendingPathComponent:documentDir.lastPathComponent];
+    NSLog(@"filePath=%@",filePath);
+    [self presentViewController:imagePicker animated:YES completion:nil];
+   /*
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    // 1st, This funcion could allow you to create a file with initial contents.
+    // 2nd, You could specify the attributes of values for the owner, group, and permissions.
+    // Here we use nil, which means we use default values for these attibutes.
+    // 3rd, it will return YES if NSFileManager create it successfully or it exists already.
+    if ([manager createFileAtPath:filePath contents:nil attributes:nil]) {
+        NSLog(@"Created the File Successfully.");
+    } else {
+        NSLog(@"Failed to Create the File");
+    }
+    */
+    /*
+    // Fetch directory path of document for local application.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    // NSFileManager is the manager organize all the files on device.
+    NSFileManager *manager = [NSFileManager defaultManager];
+    // This function will return all of the files' Name as an array of NSString.
+    NSArray *files = [manager contentsOfDirectoryAtPath:documentsDirectory error:nil];
+    // Log the Path of document directory.
+    NSLog(@"Directory: %@", documentsDirectory);
+    // For each file, log the name of it.
+    for (NSString *file in files) {
+        NSLog(@"File at: %@", file);
+    }
+     */
+    /*
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    // NSArray *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    
+    //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.lastPathComponent == %@", searchFilename];
+    //    NSArray *matchingPaths = [[[NSFileManager defaultManager] supbathsAtPath:documentsDirectory] filterUsingPredicate:predicate];
+    
+    // NSLog(@"%@", matchingPaths);
+    [self presentViewController:imagePicker animated:YES completion:nil];
+     */
 }
-
+/*
 - (void)buildAssetsLibrary
 {
     assetsLibrary = [[ALAssetsLibrary alloc] init];
@@ -171,10 +225,27 @@
         CGImageRelease(halfWayImage);
     }
     return image;
+ 
 }
-
+*/
 
 - (IBAction)AddDocuments:(id)sender {
+    /*
+    NSString *documentDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *filePath = [documentDir stringByAppendingPathComponent:@"GoogleLogo.png"];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.google.com/images/srpr/logo11w.png"]];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error) {
+            NSLog(@"Download Error:%@",error.description);
+        }
+        if (data) {
+            [data writeToFile:filePath atomically:YES];
+            NSLog(@"File is saved to %@",filePath);
+        }
+    }];
+     */
+   // id document = self.view.window.windowController.document;
 }
 
 - (IBAction)back:(id)sender {
@@ -188,5 +259,95 @@
     self.window.rootViewController = self.ViewController;
     [self.window makeKeyAndVisible];
      */
+}
+
+- (IBAction)btn4:(id)sender {
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+   // imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+/*
+- (NSMutableArray *)showFiles {
+    NSError *err = nil;
+    NSArray *myPathList = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *myPath = [myPathList objectAtIndex:0];
+    NSArray *dirContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:myPath error:&err];
+    if(err)
+        NSLog(@"showFiles() - ERROR: %@",[err localizedDescription]);
+    NSMutableArray *filePaths = nil;
+    int count = (int)[dirContent count];
+    for(int i=0; i<count; i++)
+    { [filePaths addObject:[dirContent objectAtIndex:i]];
+    } return filePaths;
+}
+ */
+
+
+
+#pragma mark - UIImagePickerControllerDelegate methods
+
+/*
+ Open PECropViewController automattically when image selected.
+ */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    image_view.image = image;
+    NSLog(@"bbbbbbbbb=%@",info.description);
+    NSURL *url=[info
+                objectForKey:UIImagePickerControllerReferenceURL];
+    NSLog(@"yyyyyyy=%@",url.description);
+    
+     [tableData addObject:[NSString stringWithFormat:@"%@",url.description]];
+    NSURL *url1=[info
+                 objectForKey:UIImagePickerControllerMediaURL];
+    NSLog(@"nnnn=%s",url1.fileSystemRepresentation);
+    
+    
+    NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+    
+    assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary assetForURL:imageURL resultBlock:^(ALAsset *asset) {
+        ALAssetRepresentation *assetRep = [asset defaultRepresentation];
+        NSLog(@"Image filename: %@", [assetRep url]);
+    } failureBlock:^(NSError *error) {
+        NSLog(@"Error: %@", error.localizedDescription);
+    }];
+    
+    
+    NSLog(@"imageURL %@",imageURL);
+
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        
+    } else {
+        [picker dismissViewControllerAnimated:YES completion:^{
+            //[self openEditor:nil];
+        }];
+    }
+    ViewController *urViewController = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
+    // urViewController.user_id=GlobalUserId;
+    [self presentViewController:urViewController animated:YES completion:nil];
+}
+
+
+
+
+
+
+///
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    [imagePicker dismissModalViewControllerAnimated:YES];
+    [image_view setImage:image];
+}
+
+//  On cancel, only dismiss the picker controller
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    //[imagePicker dismissModalViewControllerAnimated:YES];
 }
 @end

@@ -17,7 +17,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-ni-YyQ">
                     <rect key="frame" x="0.0" y="349" width="375" height="60"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.98431372549999996" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="SAVE">
                         <color key="titleColor" red="0.3294117647" green="0.83921568629999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +32,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b57-8k-FvO">
                     <rect key="frame" x="0.0" y="409" width="375" height="62"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.99093191960000004" green="0.94354818159999998" blue="0.95723485389999996" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="UPLOAD FROM GALLERY">
                         <color key="titleColor" red="0.3294117647" green="0.83921568629999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,7 +46,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7b-yj-9bw">
                     <rect key="frame" x="0.0" y="471" width="375" height="60"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.98431372549999996" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="UPLOAD FROM CAMERA">
                         <color key="titleColor" red="0.3294117647" green="0.83921568629999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,33 +58,33 @@
                         <action selector="CameraOpen:" destination="-1" eventType="touchUpInside" id="zXI-OM-JYm"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneicon@1x" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-Xk-byN">
-                    <rect key="frame" x="49" y="83" width="285" height="226"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHABDO KHOJ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-YN-kqB">
                     <rect key="frame" x="-14" y="-5" width="389" height="84"/>
-                    <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.7282407407" green="0.78463541670000003" blue="0.75338541670000003" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
-                    <color key="textColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6c-SV-7An">
                     <rect key="frame" x="1" y="22" width="46" height="30"/>
                     <state key="normal" title="Back">
-                        <color key="titleColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="deL-fD-LTb"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images1" translatesAutoresizingMaskIntoConstraints="NO" id="Dy4-Xk-byN">
+                    <rect key="frame" x="45" y="107" width="285" height="226"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="379.5" y="315.5"/>
+            <point key="canvasLocation" x="379.5" y="306.5"/>
         </view>
     </objects>
     <resources>
-        <image name="phoneicon@1x" width="66" height="80"/>
+        <image name="images1" width="259" height="194"/>
     </resources>
 </document>

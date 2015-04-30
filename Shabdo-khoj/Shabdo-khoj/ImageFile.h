@@ -18,9 +18,11 @@
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *image_view;
+
 - (IBAction)imageSave:(id)sender;
 - (IBAction)GalleryOpen:(id)sender;
 - (IBAction)CameraOpen:(id)sender;
+
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 
 @property (strong, nonatomic) UIWindow *window;

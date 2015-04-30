@@ -12,7 +12,7 @@
 
 @class ViewController;
 @class ImageFile;
-@interface AddingFilesOption : UIViewController
+@interface AddingFilesOption : UIViewController<UIImagePickerControllerDelegate>
 
 
 @property (strong, nonatomic) UIWindow *window;
@@ -26,5 +26,7 @@
 - (IBAction)AddDocuments:(id)sender;
 
 - (IBAction)back:(id)sender;
+
+- (IBAction)btn4:(id)sender;
 
 @end

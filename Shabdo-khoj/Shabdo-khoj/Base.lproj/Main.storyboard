@@ -18,14 +18,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHABDO KHOJ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAw-yb-SWK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
-                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.7282407407" green="0.78463541670000003" blue="0.75338541670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="27"/>
-                                <color key="textColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c9-dq-WU6">
                                 <rect key="frame" x="0.0" y="84" width="375" height="48"/>
-                                <color key="backgroundColor" red="0.73066833939999998" green="0.97718978099999998" blue="0.82724110399999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.98431372549999996" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Add Files">
                                     <color key="titleColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
