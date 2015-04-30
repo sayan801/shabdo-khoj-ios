@@ -128,8 +128,6 @@
 		8AD5546E1AEF78EB00B26630 = {
 			isa = PBXGroup;
 			children = (
-				8AD6E7AE1AEFCA450040DAC6 /* CoreMotion.framework */,
-				8AD6E7AC1AEFCA380040DAC6 /* MobileCoreServices.framework */,
 				8AD554791AEF78EB00B26630 /* Shabdo-khoj */,
 				8AD6E7A81AEFC6D30040DAC6 /* Framework */,
 				8AD554961AEF78EB00B26630 /* Shabdo-khojTests */,
@@ -201,6 +199,8 @@
 		8AD6E7A81AEFC6D30040DAC6 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				8AD6E7AE1AEFCA450040DAC6 /* CoreMotion.framework */,
+				8AD6E7AC1AEFCA380040DAC6 /* MobileCoreServices.framework */,
 				8AD6E7AA1AEFCA010040DAC6 /* CoreData.framework */,
 				8AD6E7791AEF79960040DAC6 /* UIKit.framework */,
 				8AD6E7A61AEFC6750040DAC6 /* CoreGraphics.framework */,
