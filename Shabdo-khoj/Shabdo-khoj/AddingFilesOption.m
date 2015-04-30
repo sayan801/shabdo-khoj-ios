@@ -341,12 +341,20 @@ UIImagePickerController *imagePicker;
 }
 
 - (IBAction)btn4:(id)sender {
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.ImageFile = [[ImageFile alloc] initWithNibName:@"ImageFile" bundle:nil];
+    self.window.rootViewController = self.ImageFile;
+    [self.window makeKeyAndVisible];
+    /*
     imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
    // imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     [self presentViewController:imagePicker animated:YES completion:nil];
+     */
 }
 /*
 - (NSMutableArray *)showFiles {

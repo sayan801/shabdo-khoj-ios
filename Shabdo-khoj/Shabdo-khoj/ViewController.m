@@ -19,6 +19,7 @@
    // NSArray *tableData;
     NSManagedObject *matches;
     NSArray *objects;
+    NSInteger *SelectedIndex;
 }
 
 - (void)viewDidLoad {
@@ -143,7 +144,11 @@
     
     return rightUtilityButtons;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SelectedIndex=indexPath.row;
+    
+}
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     
@@ -166,7 +171,8 @@
              [mToast showOnView:self.view];
              */
             NSLog(@"tags");
-            
+             //[self playMovie];
+             [self startMediaBrowserFromViewController: self usingDelegate: self];
             
             break;
         }
@@ -175,6 +181,8 @@
 //                       Toast *mToast = [Toast toastWithMessage:@"Edit functionality has been enabled"];
 //            [mToast showOnView:self.view];
            // EditEnable=YES;
+            
+           
              NSLog(@"play");
             
             break;
@@ -184,5 +192,117 @@
             break;
     }
 }
+
+
+
+
+
+/*
+
+-(void)playMovie
+{
+   
+      _moviePlayer =  [[MPMoviePlayerController alloc]
+                     initWithContentURL:[tableData objectAtIndex:0]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:_moviePlayer];
+    
+    _moviePlayer.controlStyle = MPMovieControlStyleDefault;
+    _moviePlayer.shouldAutoplay = YES;
+    [self.view addSubview:_moviePlayer.view];
+    [_moviePlayer setFullscreen:YES animated:YES];
+}
+- (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    MPMoviePlayerController *player = [notification object];
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:MPMoviePlayerPlaybackDidFinishNotification
+     object:player];
+    
+    if ([player
+         respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+    }
+}
+*/
+
+- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
+                               usingDelegate: (id <UIImagePickerControllerDelegate,
+                                               UINavigationControllerDelegate>) delegate{
+    
+    if (([UIImagePickerController isSourceTypeAvailable:
+          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
+        || (delegate == nil)
+        || (controller == nil))
+        return NO;
+    
+    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+    mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    
+    mediaUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
+        
+    // Hides the controls for moving & scaling pictures, or for
+    // trimming movies. To instead show the controls, use YES.
+    mediaUI.allowsEditing = YES;
+    
+    mediaUI.delegate = delegate;
+    
+    [controller presentModalViewController: mediaUI animated: YES];
+    return YES;
+    
+}
+// For responding to the user tapping Cancel.
+- (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
+    
+    [self dismissModalViewControllerAnimated: YES];
+}
+
+// For responding to the user accepting a newly-captured picture or movie
+- (void) imagePickerController: (UIImagePickerController *) picker
+ didFinishPickingMediaWithInfo: (NSDictionary *) info {
+    
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    
+    [self dismissModalViewControllerAnimated:NO];
+    
+    // Handle a movie capture
+    if (CFStringCompare ((__bridge_retained CFStringRef)mediaType, kUTTypeMovie, 0)
+        == kCFCompareEqualTo) {
+        
+        NSString *moviePath = [[info objectForKey:
+                                UIImagePickerControllerMediaURL] path];
+        MPMoviePlayerViewController* theMovie =
+        [[MPMoviePlayerViewController alloc] initWithContentURL: [info objectForKey:
+                                                                  UIImagePickerControllerMediaURL]];
+        [self presentMoviePlayerViewControllerAnimated:theMovie];
+        
+        // Register for the playback finished notification
+        [[NSNotificationCenter defaultCenter]
+         addObserver: self
+         selector: @selector(myMovieFinishedCallback:)
+         name: MPMoviePlayerPlaybackDidFinishNotification
+         object: theMovie];
+        
+        
+    }
+}
+// When the movie is done, release the controller.
+-(void) myMovieFinishedCallback: (NSNotification*) aNotification
+{
+    [self dismissMoviePlayerViewControllerAnimated];
+    
+    MPMoviePlayerController* theMovie = [aNotification object];
+    
+    [[NSNotificationCenter defaultCenter]
+     removeObserver: self
+     name: MPMoviePlayerPlaybackDidFinishNotification
+     object: theMovie];
+    // Release the movie instance created in playMovieAtURL:
+}
+
 
 @end

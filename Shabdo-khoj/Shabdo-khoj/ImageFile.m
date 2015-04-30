@@ -181,7 +181,17 @@
     NSURL *url1=[info
                 objectForKey:UIImagePickerControllerMediaURL];
     NSLog(@"nnnn=%s",url1.fileSystemRepresentation);
+    NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
 
+      [tableData addObject:[NSString stringWithFormat:@"%@",url.description]];
+ ALAssetsLibrary   *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary assetForURL:imageURL resultBlock:^(ALAsset *asset) {
+        ALAssetRepresentation *assetRep = [asset defaultRepresentation];
+        NSLog(@"Image filename: %@", [assetRep filename]);
+        [fileName addObject:[NSString stringWithFormat:@"%@",[assetRep filename]]];
+    } failureBlock:^(NSError *error) {
+        NSLog(@"Error: %@", error.localizedDescription);
+    }];
 
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -191,6 +201,10 @@
             //[self openEditor:nil];
         }];
     }
+    
+    ViewController *urViewController = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
+    // urViewController.user_id=GlobalUserId;
+    [self presentViewController:urViewController animated:YES completion:nil];
 }
 
 
