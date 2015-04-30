@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "ViewController.h"
 @class ViewController;
+NSMutableArray *tableData;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

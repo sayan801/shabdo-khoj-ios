@@ -16,7 +16,7 @@
 
 @implementation ViewController{
 
-    NSArray *tableData;
+   // NSArray *tableData;
     NSManagedObject *matches;
     NSArray *objects;
 }
@@ -24,7 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-     tableData = [NSArray arrayWithObjects:@"Nepal Earth Quake News", @"Speech Processing Technology Lecture", @"Scientific Research Areas", @"Mumbai Trip", @"Fast and Furious 7", @"Cooking Recipes of Bengal", @"White Chocolate Donut recipe", @"English Premier League Highlights", @"Liga BBGA Goals", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Motor technlogy Preview", @"Green Kerala Tourism", @"Thai Shrimp Cake Recipe", @"Angry Birds In Making - Behind the Scene", @"Ham and Cheese Panini", nil];
+    
+    
+    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = paths[0];
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//   // NSArray *fileArray = [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:nil];
+//    tableData = [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:nil];
+    
+    // tableData = [NSArray arrayWithObjects:@"Nepal Earth Quake News", @"Speech Processing Technology Lecture", @"Scientific Research Areas", @"Mumbai Trip", @"Fast and Furious 7", @"Cooking Recipes of Bengal", @"White Chocolate Donut recipe", @"English Premier League Highlights", @"Liga BBGA Goals", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Motor technlogy Preview", @"Green Kerala Tourism", @"Thai Shrimp Cake Recipe", @"Angry Birds In Making - Behind the Scene", @"Ham and Cheese Panini", nil];
     
     id delegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = [delegate managedObjectContext];
@@ -40,25 +49,6 @@
     
     matches=nil;
     objects=[context executeFetchRequest:request error:&error];
-//    
-//    if([objects count]!=0)
-//    {
-//        matches= [objects objectAtIndex:0];
-//        
-//        if ([matches valueForKey:@"image"])
-//        {
-//            //self.imageField.contentMode = UIViewContentModeScaleAspectFit;
-//            self.image_view.image= [UIImage imageWithData:[matches valueForKey:@"image"]];
-//            
-//            // [self.image setBackgroundImage:[UIImage imageWithData:[matches valueForKey:@"profilepicture"]] forState:UIControlStateNormal];
-//            
-//        }
-//    }
-//    else{
-//        
-//        NSLog(@"not found");
-//        [self.image_view setHidden:YES];
-//    }
 
 }
 
@@ -74,6 +64,12 @@
 {
     return [tableData count];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+        return 100;
+
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
@@ -88,21 +84,27 @@
         cell.delegate = self;
     }
     cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-    if([objects count]!=0)
-        {
-    matches= [objects objectAtIndex:indexPath.row];
-    
-            if ([matches valueForKey:@"image"])
-            {
-                //self.imageField.contentMode = UIViewContentModeScaleAspectFit;
-                cell.imageView.image= [UIImage imageWithData:[matches valueForKey:@"image"]];
-            }
-        }
-    else
-    {
+//    if([objects count]!=0)
+//        {
+//            matches= [objects objectAtIndex:indexPath.row];
+//    
+//            if ([matches valueForKey:@"image"])
+//            {
+//                //self.imageField.contentMode = UIViewContentModeScaleAspectFit;
+//                cell.imageView.image= [UIImage imageWithData:[matches valueForKey:@"image"]];
+//            }
+//            else
+//            {
+//                cell.imageView.image= [UIImage imageNamed:@"ChartDataPointNormal.png"];
+//            }
+//        }
+//    else
+//    {
      cell.imageView.image= [UIImage imageNamed:@"ChartDataPointNormal.png"];
-    }
+   // }
    
+    cell.textLabel.lineBreakMode=NSLineBreakByWordWrapping;
+    [cell.textLabel setNumberOfLines:0];
     return cell;
 }
 

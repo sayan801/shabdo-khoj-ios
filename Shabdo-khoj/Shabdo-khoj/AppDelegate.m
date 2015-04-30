@@ -23,6 +23,7 @@
 ////    _viewController2.status = @"other";
 //    self.window.rootViewController = self.ViewController;
 //    [self.window makeKeyAndVisible];
+      tableData= [NSMutableArray array];
     return YES;
 }
 
