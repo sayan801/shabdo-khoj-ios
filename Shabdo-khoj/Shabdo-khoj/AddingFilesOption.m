@@ -55,15 +55,45 @@ UIImagePickerController *imagePicker;
 */
 
 - (IBAction)AddPhotos:(id)sender {
-    
+   /*
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.ImageFile = [[ImageFile alloc] initWithNibName:@"ImageFile" bundle:nil];
     self.window.rootViewController = self.ImageFile;
     [self.window makeKeyAndVisible];
+    */
 }
 
 - (IBAction)AddVideo:(id)sender {
-  
+    
+    /*
+    imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
+    [self presentModalViewController:imagePicker animated:YES];
+    */
+    
+    
+     imagePicker = [[UIImagePickerController alloc] init];
+     imagePicker.delegate = self;
+     imagePicker.sourceType =UIImagePickerControllerSourceTypePhotoLibrary;
+     imagePicker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
+     
+     if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+     {
+     
+     UIPopoverController *popController=[[UIPopoverController alloc] initWithContentViewController:imagePicker];
+     [popController presentPopoverFromRect:CGRectMake(0, 600, 160, 300) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+     self.popOver=popController;
+     
+     }
+     else
+     {
+     [self presentViewController:imagePicker animated:YES completion:nil];
+     }
+    
+    /////////////////////////PREVIOUS CODE///////////
+  /*
    // [self buildAssetsLibrary];
     imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
@@ -74,6 +104,7 @@ UIImagePickerController *imagePicker;
      NSString *filePath = [documentDir stringByAppendingPathComponent:documentDir.lastPathComponent];
     NSLog(@"filePath=%@",filePath);
     [self presentViewController:imagePicker animated:YES completion:nil];
+   */
    /*
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -119,6 +150,60 @@ UIImagePickerController *imagePicker;
     [self presentViewController:imagePicker animated:YES completion:nil];
      */
 }
+
+
+/*
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    
+    
+    NSString *type = [info objectForKey:UIImagePickerControllerMediaType];
+    //NSLog(@"type=%@",type);
+    if ([type isEqualToString:(NSString *)kUTTypeVideo] ||
+        [type isEqualToString:(NSString *)kUTTypeMovie])
+    {// movie != video
+        NSURL *urlvideo = [info objectForKey:UIImagePickerControllerMediaURL];
+        NSLog(@"urlvideo %@",urlvideo);
+    }
+    
+    
+    NSURL *imageURL = [info valueForKey:UIImagePickerControllerReferenceURL];
+    
+    ALAssetsLibrary *assetsLibrary1 = [[ALAssetsLibrary alloc] init];
+    [assetsLibrary1 assetForURL:imageURL resultBlock:^(ALAsset *asset) {
+        ALAssetRepresentation *assetRep = [asset defaultRepresentation];
+        NSLog(@"Image filename: %@", [assetRep filename]);
+        NSString *string=[NSString stringWithFormat:@"%@",[assetRep filename]];
+        NSLog(@"string %@",string);
+        [tableData addObject:string];
+    } failureBlock:^(NSError *error) {
+        NSLog(@"Error: %@", error.localizedDescription);
+    }];
+    
+    //
+    
+    //  NSLog(@"imageURL %@",imageURL);
+    NSLog(@"TableData %@",tableData);
+    
+    [self dismissModalViewControllerAnimated:YES];
+    
+     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+     
+     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+     NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
+     NSString *moviePath = [videoUrl path];
+     
+     if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
+     UISaveVideoAtPathToSavedPhotosAlbum (moviePath, nil, nil, nil);
+     }
+     NSLog(@"videoUrl %@",videoURL);
+     }
+     NSLog(@"mediaType %@",mediaType);
+     [self dismissModalViewControllerAnimated:YES];
+    
+    //[picker release];
+}
+*/
 /*
 - (void)buildAssetsLibrary
 {
@@ -252,13 +337,7 @@ UIImagePickerController *imagePicker;
     ViewController *urViewController = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
    // urViewController.user_id=GlobalUserId;
     [self presentViewController:urViewController animated:YES completion:nil];
-    
-    /*
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.ViewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.ViewController;
-    [self.window makeKeyAndVisible];
-     */
+ 
 }
 
 - (IBAction)btn4:(id)sender {
@@ -300,8 +379,7 @@ UIImagePickerController *imagePicker;
     NSURL *url=[info
                 objectForKey:UIImagePickerControllerReferenceURL];
     NSLog(@"yyyyyyy=%@",url.description);
-    
-     [tableData addObject:[NSString stringWithFormat:@"%@",url.description]];
+       [tableData addObject:[NSString stringWithFormat:@"%@",url.description]];
     NSURL *url1=[info
                  objectForKey:UIImagePickerControllerMediaURL];
     NSLog(@"nnnn=%s",url1.fileSystemRepresentation);
@@ -312,7 +390,8 @@ UIImagePickerController *imagePicker;
     assetsLibrary = [[ALAssetsLibrary alloc] init];
     [assetsLibrary assetForURL:imageURL resultBlock:^(ALAsset *asset) {
         ALAssetRepresentation *assetRep = [asset defaultRepresentation];
-        NSLog(@"Image filename: %@", [assetRep url]);
+        NSLog(@"Image filename: %@", [assetRep filename]);
+         [fileName addObject:[NSString stringWithFormat:@"%@",[assetRep filename]]];
     } failureBlock:^(NSError *error) {
         NSLog(@"Error: %@", error.localizedDescription);
     }];
@@ -331,10 +410,8 @@ UIImagePickerController *imagePicker;
     ViewController *urViewController = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
     // urViewController.user_id=GlobalUserId;
     [self presentViewController:urViewController animated:YES completion:nil];
+    
 }
-
-
-
 
 
 
@@ -348,6 +425,6 @@ UIImagePickerController *imagePicker;
 //  On cancel, only dismiss the picker controller
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    //[imagePicker dismissModalViewControllerAnimated:YES];
+    [imagePicker dismissModalViewControllerAnimated:YES];
 }
 @end

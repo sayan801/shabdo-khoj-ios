@@ -12,7 +12,7 @@
 
 @class ViewController;
 @class ImageFile;
-@interface AddingFilesOption : UIViewController<UIImagePickerControllerDelegate>
+@interface AddingFilesOption : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 
 @property (strong, nonatomic) UIWindow *window;
@@ -28,5 +28,6 @@
 - (IBAction)back:(id)sender;
 
 - (IBAction)btn4:(id)sender;
+@property (strong,nonatomic) UIPopoverController *popOver;
 
 @end

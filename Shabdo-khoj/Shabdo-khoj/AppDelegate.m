@@ -24,6 +24,7 @@
 //    self.window.rootViewController = self.ViewController;
 //    [self.window makeKeyAndVisible];
       tableData= [NSMutableArray array];
+    fileName=[NSMutableArray array];
     return YES;
 }
 

@@ -67,7 +67,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        return 100;
+        return 90;
 
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,8 +83,8 @@
         cell.rightUtilityButtons = [self rightButtons];
         cell.delegate = self;
     }
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
-//    if([objects count]!=0)
+    cell.textLabel.text =[fileName objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text=[tableData objectAtIndex:indexPath.row];//    if([objects count]!=0)
 //        {
 //            matches= [objects objectAtIndex:indexPath.row];
 //    

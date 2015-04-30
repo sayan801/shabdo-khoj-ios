@@ -11,6 +11,7 @@
 #import "ViewController.h"
 @class ViewController;
 NSMutableArray *tableData;
+NSMutableArray *fileName;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
