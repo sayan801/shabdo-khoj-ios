@@ -19,14 +19,15 @@
    // NSArray *tableData;
     NSManagedObject *matches;
     NSArray *objects;
-    NSInteger *SelectedIndex;
+   int SelectedIndex;
+     NSString *strIndex;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
+       strIndex=@" ";
     
 //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    NSString *documentsDirectory = paths[0];
@@ -146,7 +147,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SelectedIndex=indexPath.row;
+    SelectedIndex=(int)indexPath.row;
+     strIndex=@"yes";
     
 }
 
@@ -172,7 +174,18 @@
              */
             NSLog(@"tags");
              //[self playMovie];
+            if ([strIndex isEqualToString:@" "]) {
+                
+                
+                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please Selct An Index" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+                [alert show];
+                
+            }
+            else
+            {
+
              [self startMediaBrowserFromViewController: self usingDelegate: self];
+            }
             
             break;
         }
@@ -234,25 +247,51 @@
                                usingDelegate: (id <UIImagePickerControllerDelegate,
                                                UINavigationControllerDelegate>) delegate{
     
-    if (([UIImagePickerController isSourceTypeAvailable:
-          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
-        || (delegate == nil)
-        || (controller == nil))
-        return NO;
     
-    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
-    mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    int x=SelectedIndex;
     
-    mediaUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
+    NSArray *componentsArray = [[fileName objectAtIndex:x] componentsSeparatedByString:@"."];
+    NSString *fileExtension = [componentsArray lastObject];
+    NSLog(@"fileExtension %@",fileExtension);
+    if ([fileExtension isEqualToString:@"MOV"])
+    {
+        NSLog(@"MOV");
+        if (([UIImagePickerController isSourceTypeAvailable:
+              UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
+            || (delegate == nil)
+            || (controller == nil))
+            return NO;
         
-    // Hides the controls for moving & scaling pictures, or for
-    // trimming movies. To instead show the controls, use YES.
-    mediaUI.allowsEditing = YES;
+        UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
+        mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        
+        mediaUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
+        
+        // Hides the controls for moving & scaling pictures, or for
+        // trimming movies. To instead show the controls, use YES.
+        mediaUI.allowsEditing = YES;
+        
+        mediaUI.delegate = delegate;
+        
+        [controller presentModalViewController: mediaUI animated: YES];
+      
+
+    }
+    else if ([fileExtension isEqualToString:@"JPG"])
+    {
+      UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        // NSArray *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+        
+        //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.lastPathComponent == %@", searchFilename];
+        //    NSArray *matchingPaths = [[[NSFileManager defaultManager] supbathsAtPath:documentsDirectory] filterUsingPredicate:predicate];
+        
+        // NSLog(@"%@", matchingPaths);
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
     
-    mediaUI.delegate = delegate;
-    
-    [controller presentModalViewController: mediaUI animated: YES];
-    return YES;
+      return YES;
     
 }
 // For responding to the user tapping Cancel.
