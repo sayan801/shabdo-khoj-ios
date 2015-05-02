@@ -342,19 +342,32 @@ UIImagePickerController *imagePicker;
 
 - (IBAction)btn4:(id)sender {
     
-    
+    /*
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.ImageFile = [[ImageFile alloc] initWithNibName:@"ImageFile" bundle:nil];
     self.window.rootViewController = self.ImageFile;
     [self.window makeKeyAndVisible];
-    /*
+   */
     imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
    // imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.allowsEditing = YES;
     
-    [self presentViewController:imagePicker animated:YES completion:nil];
-     */
+   // [self presentViewController:imagePicker animated:YES completion:nil];
+    if( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        
+        UIPopoverController *popController=[[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        [popController presentPopoverFromRect:CGRectMake(0, 600, 160, 300) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        self.popOver=popController;
+        
+    }
+    else
+    {
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+     
 }
 /*
 - (NSMutableArray *)showFiles {
