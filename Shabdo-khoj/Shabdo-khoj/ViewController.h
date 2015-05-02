@@ -33,7 +33,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 
-//- (IBAction)playMovie;
+- (IBAction)playMovie;
 //- (IBAction)playMovie:(id)sender;
 
 

@@ -210,13 +210,14 @@
 
 
 
-/*
 
 -(void)playMovie
 {
    
+   
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"%@",[tableData objectAtIndex:SelectedIndex]]];
       _moviePlayer =  [[MPMoviePlayerController alloc]
-                     initWithContentURL:[tableData objectAtIndex:0]];
+                     initWithContentURL:url];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(moviePlayBackDidFinish:)
@@ -241,13 +242,13 @@
         [player.view removeFromSuperview];
     }
 }
-*/
+
 
 - (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
                                usingDelegate: (id <UIImagePickerControllerDelegate,
                                                UINavigationControllerDelegate>) delegate{
     
-    
+   
     int x=SelectedIndex;
     
     NSArray *componentsArray = [[fileName objectAtIndex:x] componentsSeparatedByString:@"."];
@@ -255,6 +256,7 @@
     NSLog(@"fileExtension %@",fileExtension);
     if ([fileExtension isEqualToString:@"MOV"])
     {
+        /*
         NSLog(@"MOV");
         if (([UIImagePickerController isSourceTypeAvailable:
               UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
@@ -274,7 +276,8 @@
         mediaUI.delegate = delegate;
         
         [controller presentModalViewController: mediaUI animated: YES];
-      
+        */
+      [self playMovie];
 
     }
     else if ([fileExtension isEqualToString:@"JPG"])
